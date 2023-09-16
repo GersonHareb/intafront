@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -18,34 +17,46 @@ nav {
   border-bottom: 2px solid rgba(0, 0, 0, 0.25);
 }
 
+aside {
+  max-width: 284px;
+  width: 100%;
+  display: none;
+}
+
+section{
+  max-width:600px ;
+}
+
 .contenedor-nav {
+  width: 100%;
   max-width: 1024px;
   height: 75px;
-  margin: auto;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  margin: auto;
+  grid-template-columns: 1fr auto 1fr 30px;
   align-items: center;
-  overflow: hidden;
-  padding: 0 30px;
 }
 
 nav h1 {
   grid-column: 1/2;
   justify-self: start;
   font-weight: 400;
-  font-size: 25;
+  font-size: 25px;
   line-height: 29.3px;
+  padding-left: 35px;
 }
 
 .nav-search {
   grid-column: 2/3;
   justify-self: center;
+  display: none;
 }
 
 .nav-search input {
   width: 400px;
   height: 40px;
   border-radius: 5px;
+  border: solid 0.4px rgba(34, 34, 34, 0.253);
 }
 
 .nav-search input::placeholder {
@@ -57,39 +68,110 @@ nav h1 {
   justify-self: end;
   width: 50px;
   height: 49px;
+  padding-right: 60px;
 }
-
 
 .main-container {
   display: grid;
   max-width: 1024px;
   height: 75px;
   margin: auto;
-  font-family: 'Inter', sans-serif;
+  padding: 50px 30px;
+  font-family: "Inter", sans-serif;
 }
 
-.header-publicacion{
-    font-size: 15px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-.header-publicacion h2{
-    font-size: 15;
-    line-height: 18.15px;
-    padding-left: 15px;
+.historias {
+  max-width: 600px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 1);
+  border: solid 0.4px rgba(34, 34, 34, 0.253);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  overflow: hidden;
 }
 
-.publicacion{
-    width: 600px;
-    height: 720px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 1);
+.historias-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 20px 15px 20px 15px;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
-.iconos{
-    padding: 10px 0;
+.historias-container img {
+  margin-right: 20px;
+}
+
+.historias-container img:last-child {
+  margin-right: 0;
+}
+
+.publicacion {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 720px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 1);
+  border: solid 0.4px rgba(34, 34, 34, 0.253);
+}
+
+.header-publicacion {
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: solid 0.4px rgba(34, 34, 34, 0.253);
+}
+
+.header-publicacion h2 {
+  font-size: 15px;
+  line-height: 18.15px;
+  padding-left: 15px;
+}
+
+.body-publicacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-publicacion img {
+  padding: 15px 15px 0 15px;
+  width: 100%;
+  max-width: 488px;
+  margin: auto;
+}
+
+.texto-publicacion {
+  width: 100%;
+  max-width: 488px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.texto-publicacion p {
+  font-size: 10px;
+  line-height: 12.1px;
+  padding-bottom: 8px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+}
+
+.texto-publicacion p span {
+  font-weight: bold;
+}
+
+.num-comentarios {
+  color: rgba(164, 155, 155, 1);
+}
+
+.iconos {
+  padding: 5px 0;
 }
 
 .iconos ul {
@@ -103,6 +185,80 @@ nav h1 {
   margin-right: 20px;
 }
 
-.nav-item a i{
-    font-size: 25px;
+.nav-item a i {
+  font-size: 25px;
+}
+
+.perfil,
+.sugerencia-perfil {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+aside p {
+  font-size: 10px;
+}
+
+.perfil img {
+  width: 50px;
+  height: 49px;
+}
+
+.nombre-foto {
+  display: flex;
+  align-items: center;
+}
+
+.nombre-foto p {
+  margin-left: 5px;
+}
+
+.nombre1{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.nombre-perfil {
+  color: rgba(128, 128, 128, 1);
+}
+
+.sugerencias h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  color: rgba(128, 128, 128, 1);
+}
+
+.sugerencia-perfil {
+  padding: 5px 0;
+}
+
+.sugerencia-perfil img {
+  width: 30px;
+}
+
+.seguir-cuenta p,
+.cambiar-cuenta p {
+  color: rgba(28, 160, 246, 1);
+  font-size: 12px;
+}
+
+.perfil-nombre {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-search {
+    display: block;
+  }
+
+  aside {
+    display: block;
+  }
+
+  .main-container {
+  grid-template-columns: 2fr 0.7fr;
+}
 }
